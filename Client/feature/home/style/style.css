@@ -1,0 +1,21 @@
+body {
+    background-color: #f7f5ee;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    align-items: center;
+}
+/* menu bar  */
+.menuBar {
+    width: 100%;
+    height: fit-content;
+    background-color:orange;
+}
+.logo {
+    position: relative;
+    height: 20;
+    width: 20;
+}
+.textHa {
+    font-size: 20;
+    color: red;
+}
