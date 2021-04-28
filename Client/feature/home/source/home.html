@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="styleSheet" type="text/css" href="../style/style.css" />
+    <script src="../style/style.js"></script>
+    <title>TrueBeauty</title>
+  </head>
+
+  <body>
+    <!-- MENU BAR -->
+    <div class="menuBar">
+      <img class="logo" src="../../../asset/Images/logo.png" />
+      <a href="home.html">
+        <p class="titleMenu titleHome">Trang chủ</p>
+      </a>
+      <a href="../../product/source/product.html">
+        <p class="titleMenu titleProduct">Sản phẩm</p>
+      </a>
+    </div>
+
+    <!-- SLIDE SHOW -->
+    <div class="container">
+      <!-- Thêm ảnh ở đây -->
+      <div class="for_slides">
+        <img class="mySlides fade" src="../../../asset/Images/background.jpg" />
+        <img class="mySlides fade" src="../../../asset/Images/footer.jpg" />
+      </div>
+      <!-- Thêm boxIn ở đây -->
+      <div class="for_boxIn">
+        <div class="boxIn up">
+          <input type="search" class="search" />
+          <img src="../../../asset/icon/ic_search.png" class="ic_search" onclick="showBoxChoose()" />
+        </div>
+      </div>
+      <!-- Thêm dot ở đây -->
+      <div class="myDots">
+        <div class="dot" onclick="currentSlide(0)"></div>
+        <div class="dot" onclick="currentSlide(1)"></div>
+      </div>
+      <!-- Button giữ nguyên -->
+      <div class="for_buttons">
+        <p class="myButtons prev" onclick="plusSlide(-1)">❮</p>
+        <p class="myButtons next" onclick="plusSlide(1)">❯</p>
+      </div>
+    </div>
+
+    <!-- BOX CHOOSE -->
+    <div class="box_choose"></div>
+
+    <script>
+      let slideIndex = 0;
+      showSlide(slideIndex);
+      showAuto();
+
+      function showAuto() {
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+
+        for (let i = 0; i < slides.length; i++)
+          slides[i].style.display = "none";
+        for (let i = 0; i < dots.length; i++)
+          dots[i].className = dots[i].className.replace(" active", "");
+
+        slides[slideIndex].style.display = "block";
+        dots[slideIndex].className += " active";
+
+        slideIndex++;
+        if (slideIndex > slides.length - 1) slideIndex = 0;
+
+        setTimeout(showAuto, 5000);
+      }
+
+      function currentSlide(n) {
+        showSlide((slideIndex = n));
+      }
+
+      function plusSlide(n) {
+        showSlide((slideIndex += n));
+      }
+
+      function showSlide(n) {
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+
+        for (var i = 0; i < slides.length; i++)
+          slides[i].style.display = "none";
+        for (var i = 0; i < dots.length; i++)
+          dots[i].className = dots[i].className.replace(" active", "");
+
+        if (n > slides.length - 1) slideIndex = 0;
+        else if (n < 0) slideIndex = slides.length - 1;
+
+        slides[slideIndex].style.display = "block";
+        dots[slideIndex].className += " active";
+      }
+    </script>
+  </body>
+</html>

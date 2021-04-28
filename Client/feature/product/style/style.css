@@ -1,0 +1,43 @@
+body {
+    background-color: #f7f5ee;
+    margin: 0px 0px;
+    align-items: center;
+  }
+  /* menu bar  */
+  .menuBar {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #f5f0ea;
+    border-width: 2px;
+  }
+  .logo {
+    width: 50px;
+    margin-left: 20px;
+  }
+  .logo:hover {
+    cursor: pointer;
+  }
+  
+  .titleMenu {
+    position: absolute;
+    color: purple;
+    transition: 0.5s;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+  }
+  .titleMenu:hover {
+    cursor: pointer;
+    color: #f491b8;
+    font-weight: bold;
+  }
+  .titleMenu:focus {
+    text-decoration: underline;
+  }
+  .titleHome {
+    left: 200px;
+    top: 3px;
+  }
+  .titleProduct {
+    left: 350px;
+    top: 3px;
+  }
