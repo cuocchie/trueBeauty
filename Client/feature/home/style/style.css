@@ -41,6 +41,18 @@ body {
   left: 350px;
   top: 3px;
 }
+.titleBeautyHolder {
+  left: 200px;
+  top: 3px;
+}
+.titleTimKiem {
+  left: 400px;
+  top: 3px;
+}
+.titleTinTuc{
+  left: 550px;
+  top: 3px;
+}
 
 /*
 * THIS IS FOR SLIDE 

@@ -21,14 +21,10 @@ li {
 }
 
 li a {
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
- color: rgb(190, 63, 63);
- text-decoration: none;
- font-size: 35px;
- font-weight: bold;
- margin: 25px 100px 75px 100px;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #f5f0ea;
+  border-width: 2px;
 }
 .row {
   column-count: 3;
